@@ -5,12 +5,23 @@ import urllib2
 import os
 import re
 import cookielib
-F = open('Aim.txt','w')
 L = {}
-def Cnt(f):
+D = set()
+Screen_Table = open('Screen_Table.txt','r')
+Screen_Table = Screen_Table.read()
+# Screen_Table=Screen_Table.encode('utf-8')
+Screen_Table = Screen_Table.split()
+for i in Screen_Table:
+	if i not in D:
+		D.add(i)
+		print i
+
+def Cnt(f,F):
 	f = f.read()
 	f = map(str,f.split())
 	for i in f:
+		if i in D:
+			continue
 		if  i not in L:
 			L[i] = 1;
 		else:

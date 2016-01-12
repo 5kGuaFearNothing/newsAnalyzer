@@ -24,8 +24,8 @@ def Judge_len(s1):
 		return False
 	return True
 
-F = open('Temp1.txt','w')
-def gao(s):
+# F = open('Temp1.txt','w')
+def gao(s,F):
 	Origin = map(str,s.split())
 	for s1 in Origin:
 		if(Judge_len(s1) and Judge_number(s1) and Judge_letter(s1)):
@@ -33,6 +33,6 @@ def gao(s):
 			F.write(s1)
 			F.write('   ')
 	return F
-def Chose(f):
+def Chose(f,F):
 	f = f.read()
-	return gao(f)
+	return gao(f,F)
