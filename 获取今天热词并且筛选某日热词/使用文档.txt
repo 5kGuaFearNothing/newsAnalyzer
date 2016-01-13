@@ -1,0 +1,13 @@
+Screen_Table.txt 是过滤词文件，你需要过滤什么词在这个文本里继续添加
+数据库名字叫做 text.db
+数据库里只有2015-01-01 到 2015-01-13的数据
+数据表如下
+# cu.execute("create table Day(Title char(100) ,Link char(100),Accurate_time char(20),Content char(5000),primary key (Title,Link,Accurate_time,Content))")
+就这一张表
+
+调用main 里面的nong（begin,end）的函数
+
+begin 格式如下 2014-13-01 
+
+函数会生成由2015-01-01to2015-01-01.txt 如下格式的文件，由起始日期和终止日期组成
+Get_Today_news.py 文件是获取今天的新闻并添加到同目录的text.db文件内
